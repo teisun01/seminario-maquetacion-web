@@ -9,7 +9,7 @@ body {
   background-color: #0b0b0b;
   background-image: url("img/gridtriangulos.png");
   background-repeat: repeat;
-  background-size: 100%; /* ajustá según cómo se vea */
+  background-size: 100%;
   font-family:Arial, Helvetica, sans-serif;
   margin:0;
   padding: 0;
@@ -41,8 +41,7 @@ header a {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-size: 14px;
-  transition: 0.3s;
-    margin-right: 32px;
+  margin-right: 32px;
 }
 
 header a:hover {
@@ -69,13 +68,14 @@ nav a:hover {
   color: #fff;
 }
 
-p, h1, h2, h3 {
+h1, h2, h3 {
     color: #fff;
     font-family: 'Oswald';
 }
 
 p {
 font-size: 18px;
+    color: #fff;
 font-family: 'Sansation';
 }
 
@@ -154,7 +154,7 @@ h1, h2 {
 }
 
 .titulo-grande {
-  font-size: 48px; /* ajustá a gusto */
+  font-size: 48px;
 }
 
 .icono {
@@ -182,7 +182,7 @@ h1, h2 {
     margin: 0;
   padding: 20px;
 
-  background: rgba(17, 17, 17, 0.6); /* 👈 glass con color */
+  background: rgba(17, 17, 17, 0.6);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -191,25 +191,6 @@ h1, h2 {
   margin-top: 32px;
   font-family: 'Sansation';
 
-}
-
-.portada span.color-texto-azul {
-    background: linear-gradient(to right, #00d4ff, #ff4ecd);
-    
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-
-    display: inline-block; /* 🔥 IMPORTANTE */
-
-    background-repeat: no-repeat;
-    
-}
-
-.portada span.color-texto-azul {
-    background-size: 100% 100%;
 }
 
 .media-row {
@@ -266,8 +247,8 @@ text-align: left;
 
 .boton-secundario {
   display: flex;
-align-items: flex-start;
-text-align: left;
+  align-items: center;
+  justify-content: center;
   gap: 8px;
 
   padding: 10px 16px;
@@ -282,7 +263,6 @@ text-align: left;
 
   border: 1px solid transparent;
 
-  /* 👇 magia del gradiente en borde */
   background-image: 
     linear-gradient(#0b0b0b, #0b0b0b), 
     linear-gradient(90deg, #00d4ff, #ffffff, #ff4ecd);
@@ -456,12 +436,7 @@ text-align: left;
 .skill-fill {
   height: 100%;
   border-radius: 999px;
-
   background: linear-gradient(90deg, #00d4ff, #ff4ecd);
-}
-
-.skill-fill {
-  animation: carga 1.5s ease;
 }
 
 @keyframes carga {
@@ -488,11 +463,10 @@ text-align: left;
 }
 
 .cta .card {
-  max-width: 600px; /* 👈 clave */
+  max-width: 600px;
   width: 100%;
 align-items: flex-start;
 text-align: left;
-    border-radius: none;
   background-color: #ffffff00;
   border: none;
 }
@@ -503,7 +477,7 @@ text-align: left;
   justify-content: center;
   gap: 12px;
   margin: 16px 0;
-  flex-wrap: wrap; /* 👈 para responsive */
+  flex-wrap: wrap;
 }
 
 .cta span.color-texto-azul {
@@ -515,7 +489,7 @@ text-align: left;
     -webkit-text-fill-color: transparent;
     color: transparent;
 
-    display: inline-block; /* 🔥 IMPORTANTE */
+    display: inline-block;
 
     background-repeat: no-repeat;
     
@@ -524,7 +498,6 @@ text-align: left;
 .cta span.color-texto-azul {
     background-size: 100% 100%;
 }
-
 
 
 footer {
@@ -543,7 +516,7 @@ width: 100%;
 }
 
 
-/* Logo (RJ.) */
+/* RJ */
 footer p {
   color: #fff;
   font-weight: 600;
@@ -562,8 +535,23 @@ footer p {
 
   header {
     flex-direction: column;
+    align-items: center;
     gap: 12px;
   }
+
+    header p {
+    margin-left: 0;
+  }
+
+  header a {
+    margin-right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
 
   nav ul {
     flex-direction: column;
@@ -573,5 +561,6 @@ footer p {
   .botones {
     flex-direction: column;
   }
+
 
 }
